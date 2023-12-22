@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="Day12Assignment.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="OurStyle.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 26px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class ="topPanel"><h2>OurSite Application<br /></h2>
+                <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Article.aspx">Article</asp:HyperLink>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="mainPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </div>
+            <div class="bottomPanel"></div>
+        </div>
+    </form>
+</body>
+</html>
